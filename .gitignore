@@ -1,0 +1,8 @@
+/bazel-bin
+/bazel-out
+/bazel-rules_dejagnu
+/bazel-testlogs
+/testsuite/bazel-bin
+/testsuite/bazel-out
+/testsuite/bazel-testlogs
+/testsuite/bazel-testsuite

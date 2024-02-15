@@ -1,0 +1,4 @@
+load_lib lib.exp
+
+dg-init
+dg-finish

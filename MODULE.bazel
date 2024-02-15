@@ -1,0 +1,17 @@
+"""Bazel rules for running DejaGNU test suites."""
+
+module(
+    name = "rules_dejagnu",
+    version = "0.0.1",
+    compatibility_level = 1,
+)
+
+bazel_dep(name = "bazel_skylib", version = "1.4.1")
+
+bazel_dep(name = "aspect_bazel_lib", version = "1.32.1", dev_dependency = True)
+
+dejagnu = use_extension("//dejagnu:extension.bzl", "dejagnu")
+dejagnu.toolchain(version = "1.6.3")
+use_repo(dejagnu, "dejagnu")
+
+register_toolchains("@dejagnu//:toolchain")

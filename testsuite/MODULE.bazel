@@ -1,0 +1,7 @@
+module(name = "rules_dejagnu_testsuite")
+
+bazel_dep(name = "rules_dejagnu", version = "0.0.1", dev_dependency = True)
+local_path_override(
+    module_name = "rules_dejagnu",
+    path = "..",
+)
