@@ -17,6 +17,11 @@ Add the following to your `MODULE.bazel`:
 
 ```
 bazel_dep(name = "rules_dejagnu", version = "0.0.1", dev_dependency = True)
+git_override(
+    module_name = "rules_dejagnu",
+    commit = "8e57c675f9e3efa394588a87966b9e132216588c",
+    remote = "https://github.com/jaqx0r/rules_dejagnu.git",
+)
 ```
 
 
