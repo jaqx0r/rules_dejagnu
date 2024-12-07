@@ -9,6 +9,8 @@ The full manual for DejaGNU is https://www.gnu.org/software/dejagnu/manual/index
 
 This is a Bazel module (https://bazel.build) that provides a way to let Bazel execute DejaGNU test suites.
 
+Full API documentation is available in [`docs/rules.md`](docs/rules.md)
+
 NOTE: This module assumes the existence of the `expect` interpreter in the system path.  It is future-work to offer a hermetic `expect` in the Bazel build environment.
 
 ## Setup
@@ -33,4 +35,4 @@ load("@rules_dejagnu//dejagnu:defs.bzl", "dejagnu_test")
 dejagnu_test(name = "simple", srcs = ["simple.exp"])
 ```
 
-See [`testsuite/BUILD`](testsuite/BUILD) for working examples.
+Full API documentation is available in [`docs/rules.md`](docs/rules.md). See [`testsuite/BUILD`](testsuite/BUILD) for working examples.
