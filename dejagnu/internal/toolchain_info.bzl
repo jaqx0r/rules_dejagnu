@@ -17,12 +17,9 @@
 """This module implements the DejaGNU toolchain specification."""
 
 load("@rules_dejagnu//dejagnu:providers.bzl", "DejaGNURuntestInfo", "DejaGNUToolchainInfo")
-load("@rules_dejagnu//dejagnu/internal:toolchain_type.bzl", "DEJAGNU_TOOLCHAIN_TYPE")
 
 def _dejagnu_toolchain_info_impl(ctx):
     """Toolchain main implementation."""
-    dejagnu_runfiles = ctx.attr.runtest[DefaultInfo].default_runfiles.files
-
     dejagnu = DejaGNUToolchainInfo(
         runtest = DejaGNURuntestInfo(
             runtest = ctx.attr.runtest.files_to_run,

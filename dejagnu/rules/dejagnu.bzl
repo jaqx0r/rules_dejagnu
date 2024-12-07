@@ -26,8 +26,6 @@ def _dejagnu_test_impl(ctx):
 
     dejagnu = dejagnu_toolchain(ctx)
 
-    libdir = dejagnu.runtest.libs.to_list()[0].path
-
     substitutions = {
         "{tool}": ctx.label.name,
         "{srcdir}": ctx.files.srcs[0].dirname,

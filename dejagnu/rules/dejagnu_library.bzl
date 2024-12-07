@@ -14,6 +14,8 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
+"""Dejagnu Libraries."""
+
 load("//dejagnu:providers.bzl", "DejaGNULibraryInfo")
 
 def _dejagnu_lib_impl(ctx):
