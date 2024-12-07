@@ -109,10 +109,10 @@ def _dejagnu_test_impl(ctx):
 dejagnu_test = rule(
     implementation = _dejagnu_test_impl,
     doc = """\
-    Run DejaGNU's `runtest` against a test suite.
+Run DejaGNU's `runtest` against a test suite.
 
-    See also https://www.gnu.org/software/dejagnu/manual/Invoking-runtest.html
-    """,
+See also https://www.gnu.org/software/dejagnu/manual/Invoking-runtest.html
+""",
     attrs = {
         "srcs": attr.label_list(
             allow_files = [".exp"],

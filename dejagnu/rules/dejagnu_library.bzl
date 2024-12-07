@@ -43,8 +43,8 @@ dejagnu_library = rule(
         "deps": attr.label_list(providers = [DejaGNULibraryInfo], doc = "DejaGNU libraries used by this library."),
     },
     doc = """\
-    A DejaGNU Library.
+A DejaGNU Library.
 
-    This rule specifies `expect` program text that can be reused between testsuites.
-    """,
+This rule specifies `expect` program text that can be reused between testsuites.
+""",
 )
