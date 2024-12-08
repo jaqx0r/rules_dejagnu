@@ -21,7 +21,7 @@ jobs:
     uses: bazel-contrib/.github/.github/workflows/bazel.yaml@v7
     with:
       # ci.bazelrc is _not_ automatically used: https://github.com/bazel-contrib/.github/issues/23
-      bazel_test_command: "bazel --bazelrc=${{ github.workspace }}/.github/workflows/ci.bazelrc --bazelrc=.bazelrc test //..."
+      bazel_test_command: "bazel --bazelrc=${GITHUB_WORKSPACE}/.github/workflows/ci.bazelrc --bazelrc=.bazelrc test //..."
       folders: |
         [
           ".",
