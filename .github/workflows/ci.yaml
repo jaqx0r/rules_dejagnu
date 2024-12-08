@@ -26,5 +26,6 @@ jobs:
         ]
       exclude: |
         [
-          {"folder": ".", "bzlmodEnabled": false}
+          {"folder": ".", "bzlmodEnabled": false},
+          {"folder": "testsuite", "bzlmodEnabled": false}
         ]
