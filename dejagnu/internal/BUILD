@@ -29,5 +29,5 @@ exports_files(
     [
         "dejagnu_runtest_wrapper.tpl",
     ],
-    visibility = ["//visibility:public"],
+    visibility = ["//:__subpackages__"],
 )
