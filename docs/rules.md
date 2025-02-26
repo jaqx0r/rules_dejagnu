@@ -7,6 +7,8 @@ Exported rules for DejaGNU bazel rules, the main library to include in user BUIL
 ## dejagnu_library
 
 <pre>
+load("@rules_dejagnu//dejagnu:defs.bzl", "dejagnu_library")
+
 dejagnu_library(<a href="#dejagnu_library-name">name</a>, <a href="#dejagnu_library-deps">deps</a>, <a href="#dejagnu_library-srcs">srcs</a>)
 </pre>
 
@@ -29,6 +31,8 @@ This rule specifies `expect` program text that can be reused between testsuites.
 ## dejagnu_test
 
 <pre>
+load("@rules_dejagnu//dejagnu:defs.bzl", "dejagnu_test")
+
 dejagnu_test(<a href="#dejagnu_test-name">name</a>, <a href="#dejagnu_test-deps">deps</a>, <a href="#dejagnu_test-srcs">srcs</a>, <a href="#dejagnu_test-data">data</a>, <a href="#dejagnu_test-tool_exec">tool_exec</a>)
 </pre>
 
