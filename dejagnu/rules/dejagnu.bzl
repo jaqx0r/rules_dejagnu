@@ -29,8 +29,7 @@ def _dejagnu_test_impl(ctx):
     substitutions = {
         "{tool}": ctx.label.name,
         "{srcdir}": ctx.files.srcs[0].dirname,
-        "{runtest}": dejagnu.runtest.runtest.executable.path,
-        "{libdir}": dejagnu.runtest.libs.to_list()[0].dirname,
+        "{runtest}": dejagnu.runtest.runtest.executable.short_path,
         "{srcs}": " ".join([src.basename for src in ctx.files.srcs]),
     }
 

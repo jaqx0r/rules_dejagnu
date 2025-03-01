@@ -19,8 +19,6 @@
 #
 # bazel requires an intermediate test executable per test rule, this template provides that executable.
 
-export DEJAGNULIBS="{libdir}"
-
 {runtest} --version
 
 set -e
