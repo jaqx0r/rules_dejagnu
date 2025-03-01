@@ -53,6 +53,10 @@ def _dejagnu_repository_impl(repository_ctx):
         integrity = source["integrity"],
         stripPrefix = "dejagnu-{}".format(version),
     )
+    repository_ctx.file(
+        "MODULE.bazel",
+        "module(name = {name})\n".format(name = repr(repository_ctx.name)),
+    )
     repository_ctx.file("BUILD.bazel", _DEJAGNU_BUILD)
     repository_ctx.file("toolchain/BUILD.bazel", _DEJAGNU_TOOLCHAIN_BUILD)
 

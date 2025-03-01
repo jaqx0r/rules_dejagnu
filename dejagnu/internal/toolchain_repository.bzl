@@ -29,7 +29,14 @@ toolchain(
 """
 
 def _dejagnu_toolchain_repository_impl(repository_ctx):
-    repository_ctx.file("BUILD.bazel", TOOLCHAIN_BUILD.format(dejagnu_repo_name = repr(repository_ctx.attr.dejagnu_repository)))
+    repository_ctx.file(
+        "MODULE.bazel",
+        "module(name = {name})\n".format(name = repr(repository_ctx.name)),
+    )
+    repository_ctx.file(
+        "BUILD.bazel",
+        TOOLCHAIN_BUILD.format(dejagnu_repo_name = repr(repository_ctx.attr.dejagnu_repository)),
+    )
 
 dejagnu_toolchain_repository = repository_rule(
     implementation = _dejagnu_toolchain_repository_impl,
