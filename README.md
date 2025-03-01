@@ -36,3 +36,8 @@ dejagnu_test(name = "simple", srcs = ["simple.exp"])
 ```
 
 Full API documentation is available in [`docs/rules.md`](docs/rules.md). See [`testsuite/BUILD`](testsuite/BUILD) for working examples.
+
+
+## Debugging
+
+`bazel test --strategy=TestRunner=local //:simple_test` will leave the test tree lying around for inspection.
