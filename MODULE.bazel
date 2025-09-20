@@ -10,7 +10,7 @@ bazel_dep(name = "bazel_skylib", version = "1.7.1")
 
 bazel_dep(name = "aspect_bazel_lib", version = "2.14.0", dev_dependency = True)
 bazel_dep(name = "buildifier_prebuilt", version = "8.0.3", dev_dependency = True)
-bazel_dep(name = "platforms", version = "0.0.11", dev_dependency = True)
+bazel_dep(name = "platforms", version = "1.0.0", dev_dependency = True)
 
 dejagnu = use_extension("//dejagnu:extension.bzl", "dejagnu")
 dejagnu.toolchain(version = "1.6.3")
